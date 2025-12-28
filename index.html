@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreeTube - Смотри YouTube без ограничений</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Анимированный фон с частицами -->
+    <div class="particles" id="particles"></div>
+    
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">▶</span>
+                FreeTube
+            </a>
+            <div class="nav-links">
+                <a href="#features">Возможности</a>
+                <a href="#reviews">Отзывы</a>
+                <a href="#faq">FAQ</a>
+            </div>
+            <a href="#download" class="nav-btn">Скачать</a>
+        </div>
+    </nav>
+
+    <!-- Главный экран -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge animate-fade-in">
+                <span class="badge-dot"></span>
+                Работает без VPN
+            </div>
+            <h1 class="hero-title animate-fade-in-up">
+                Смотри <span class="gradient-text">YouTube</span><br>
+                без ограничений
+            </h1>
+            <p class="hero-subtitle animate-fade-in-up delay-1">
+                FreeTube — это бесплатное приложение для просмотра YouTube в России. 
+                Никаких VPN, никаких тормозов. Просто открой и смотри.
+            </p>
+            <div class="hero-buttons animate-fade-in-up delay-2">
+                <a href="freetube.apk" download class="btn btn-primary">
+                    <span class="btn-icon">📱</span>
+                    Скачать APK
+                    <span class="btn-size">~15 MB</span>
+                </a>
+                <a href="#features" class="btn btn-secondary">
+                    Узнать больше
+                </a>
+            </div>
+            <div class="hero-stats animate-fade-in-up delay-3">
+                <div class="stat">
+                    <span class="stat-number">500K+</span>
+                    <span class="stat-label">Скачиваний</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">4.9</span>
+                    <span class="stat-label">Рейтинг</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Бесплатно</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image animate-float">
+            <div class="phone-mockup">
+                <div class="phone-screen">
+                    <div class="video-placeholder">
+                        <div class="play-button">▶</div>
+                    </div>
+                    <div class="video-info">
+                        <div class="video-title-placeholder"></div>
+                        <div class="video-channel-placeholder"></div>
+                    </div>
+                    <div class="video-list">
+                        <div class="video-item"></div>
+                        <div class="video-item"></div>
+                        <div class="video-item"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="glow glow-1"></div>
+            <div class="glow glow-2"></div>
+        </div>
+    </section>
+
+    <!-- Возможности -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Возможности</span>
+                <h2 class="section-title">Всё что нужно для<br><span class="gradient-text">комфортного просмотра</span></h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Быстрая загрузка</h3>
+                    <p>Видео грузятся моментально без задержек и буферизации</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">🔓</div>
+                    <h3>Без VPN</h3>
+                    <p>Работает напрямую без необходимости включать VPN</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">📺</div>
+                    <h3>Полный функционал</h3>
+                    <p>Подписки, плейлисты, история — всё как в оригинале</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Тёмная тема</h3>
+                    <p>Приятный интерфейс с поддержкой тёмной темы</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">📥</div>
+                    <h3>Скачивание видео</h3>
+                    <p>Сохраняй видео и смотри офлайн когда угодно</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon">🔔</div>
+                    <h3>Уведомления</h3>
+                    <p>Получай уведомления о новых видео любимых каналов</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Как это работает -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Как это работает</span>
+                <h2 class="section-title">Три простых шага</h2>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Скачай приложение</h3>
+                    <p>Нажми на кнопку "Скачать APK" и загрузи файл</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Установи</h3>
+                    <p>Открой скачанный файл и разреши установку</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Смотри</h3>
+                    <p>Наслаждайся любимым контентом без ограничений</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Отзывы</span>
+                <h2 class="section-title">Что говорят <span class="gradient-text">пользователи</span></h2>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Наконец-то могу смотреть YouTube без всяких VPN! Приложение работает идеально, видео грузятся быстро. Спасибо разработчикам!"</p>
+                    <div class="review-author">
+                        <div class="author-avatar">А</div>
+                        <div class="author-info">
+                            <span class="author-name">Алексей К.</span>
+                            <span class="author-location">Москва</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Пользуюсь уже месяц — ни одного сбоя. Интерфейс удобный, всё понятно. Рекомендую всем кто устал от тормозов VPN."</p>
+                    <div class="review-author">
+                        <div class="author-avatar">М</div>
+                        <div class="author-info">
+                            <span class="author-name">Мария П.</span>
+                            <span class="author-location">Санкт-Петербург</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Установил родителям — теперь они сами смотрят видео без моей помощи. Приложение простое и надёжное, работает как часы!"</p>
+                    <div class="review-author">
+                        <div class="author-avatar">Д</div>
+                        <div class="author-info">
+                            <span class="author-name">Дмитрий С.</span>
+                            <span class="author-location">Новосибирск</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Качество видео отличное, даже 4K работает без проблем. Функция скачивания — вообще топ! Лучшее решение для России."</p>
+                    <div class="review-author">
+                        <div class="author-avatar">Е</div>
+                        <div class="author-info">
+                            <span class="author-name">Елена В.</span>
+                            <span class="author-location">Екатеринбург</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Перепробовал кучу способов — VPN, зеркала, ничего нормально не работало. FreeTube решил все проблемы. Респект!"</p>
+                    <div class="review-author">
+                        <div class="author-avatar">И</div>
+                        <div class="author-info">
+                            <span class="author-name">Иван Р.</span>
+                            <span class="author-location">Казань</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Подписки синхронизируются, история сохраняется. Всё работает как надо. Рекомендую друзьям — все довольны!"</p>
+                    <div class="review-author">
+                        <div class="author-avatar">О</div>
+                        <div class="author-info">
+                            <span class="author-name">Ольга Н.</span>
+                            <span class="author-location">Краснодар</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">FAQ</span>
+                <h2 class="section-title">Частые вопросы</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Это безопасно?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Да, приложение полностью безопасно. Мы не собираем личные данные и не требуем лишних разрешений. Код проверен на вирусы.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Приложение бесплатное?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Да, FreeTube абсолютно бесплатен. Никаких скрытых платежей или подписок.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Работает на iOS?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Пока приложение доступно только для Android. Версия для iOS находится в разработке.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Можно войти в свой аккаунт Google?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Да, вы можете авторизоваться через Google и получить доступ к своим подпискам, плейлистам и истории просмотров.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Как часто выходят обновления?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Мы выпускаем обновления регулярно, примерно раз в 2 недели. Приложение уведомит вас о новой версии.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция скачивания -->
+    <section class="download" id="download">
+        <div class="container">
+            <div class="download-card">
+                <div class="download-content">
+                    <h2>Готов смотреть YouTube<br><span class="gradient-text">без ограничений?</span></h2>
+                    <p>Скачай FreeTube прямо сейчас и забудь о блокировках навсегда</p>
+                    <a href="freetube.apk" download class="btn btn-primary btn-large">
+                        <span class="btn-icon">📱</span>
+                        Скачать FreeTube
+                        <span class="btn-size">APK • ~15 MB</span>
+                    </a>
+                    <div class="download-info">
+                        <span>✓ Бесплатно</span>
+                        <span>✓ Без регистрации</span>
+                        <span>✓ Без рекламы</span>
+                    </div>
+                </div>
+                <div class="download-glow"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-icon">▶</span>
+                        FreeTube
+                    </a>
+                    <p>Смотри YouTube без ограничений</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#features">Возможности</a>
+                    <a href="#reviews">Отзывы</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="mailto:support@freetube.app">Поддержка</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 FreeTube. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
