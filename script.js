@@ -159,12 +159,23 @@ function initCounters() {
                 const counter = entry.target;
                 const target = counter.innerText;
                 
-                // Извлекаем число из текста (например, "500K+" -> 500)
-                const numericValue = parseInt(target.replace(/[^0-9]/g, ''));
-                const suffix = target.replace(/[0-9]/g, '');
+                // Проверяем, содержит ли число десятичную точку (например, "4.9")
+                const hasDecimal = target.includes('.');
                 
-                if (!isNaN(numericValue)) {
-                    animateCounter(counter, numericValue, suffix);
+                if (hasDecimal) {
+                    // Для дробных чисел - парсим как float
+                    const numericValue = parseFloat(target.replace(/[^0-9.]/g, ''));
+                    const suffix = target.replace(/[0-9.]/g, '');
+                    if (!isNaN(numericValue)) {
+                        animateCounterDecimal(counter, numericValue, suffix);
+                    }
+                } else {
+                    // Извлекаем число из текста (например, "500K+" -> 500)
+                    const numericValue = parseInt(target.replace(/[^0-9]/g, ''));
+                    const suffix = target.replace(/[0-9]/g, '');
+                    if (!isNaN(numericValue)) {
+                        animateCounter(counter, numericValue, suffix);
+                    }
                 }
                 
                 observer.unobserve(counter);
@@ -173,6 +184,24 @@ function initCounters() {
     }, observerOptions);
 
     counters.forEach(counter => observer.observe(counter));
+}
+
+// Анимация для дробных чисел (например, 4.9)
+function animateCounterDecimal(element, target, suffix) {
+    let current = 0;
+    const increment = target / 50;
+    const duration = 2000;
+    const stepTime = duration / 50;
+    
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            element.innerText = target.toFixed(1) + suffix;
+            clearInterval(timer);
+        } else {
+            element.innerText = current.toFixed(1) + suffix;
+        }
+    }, stepTime);
 }
 
 function animateCounter(element, target, suffix) {
