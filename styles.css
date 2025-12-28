@@ -178,9 +178,13 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
+    gap: 4rem;
     padding: 8rem 2rem 4rem;
     position: relative;
     overflow: hidden;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .hero::before {
